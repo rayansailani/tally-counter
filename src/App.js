@@ -15,7 +15,7 @@ const App = () => {
     if (count >= 1) setCount((prev) => prev - 1);
   };
   return (
-    <Container maxWidth="lg" sx={{ background: "#44FFD1" }}>
+    <Container maxWidth="xl" sx={{ background: "#44FFD1", minWidth: "100vw" }}>
       <Box
         display="flex"
         flexDirection="column"
