@@ -33,7 +33,7 @@ const App = () => {
         >
           {count}
         </Typography>
-        <Box
+        {/* <Box
           display="flex"
           justifyContent="space-between"
           width="50vw"
@@ -46,15 +46,33 @@ const App = () => {
           <IconButton size="large" onClick={decrementCount}>
             <RemoveIcon sx={{ fontSize: "6rem" }} />
           </IconButton>
-        </Box>
+        </Box> */}
         <Button
-          size="large"
-          onClick={resetCount}
           variant="contained"
-          sx={{ height: "3rem", margin: "3rem 0 !important" }}
+          sx={{ width: "60vw", height: "40vh" }}
+          onClick={incrementCount}
         >
-          Reset
+          <AddIcon sx={{ fontSize: "6rem" }} />
         </Button>
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          width="50vw"
+          alignItems="center"
+          marginBottom="1rem"
+        >
+          <Button
+            size="large"
+            onClick={resetCount}
+            variant="contained"
+            sx={{ height: "3rem", margin: "3rem 0 !important" }}
+          >
+            Reset
+          </Button>
+          <IconButton size="large" onClick={decrementCount}>
+            <RemoveIcon sx={{ fontSize: "6rem" }} />
+          </IconButton>
+        </Box>
       </Box>
     </Container>
   );
