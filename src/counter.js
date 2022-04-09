@@ -6,7 +6,11 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(
+    Number(localStorage.getItem("countValue")) === 0
+      ? 0
+      : Number(localStorage.getItem("countValue"))
+  );
   const incrementCount = () => {
     localStorage.setItem("countValue", count + 1);
     setCount(Number(localStorage.getItem("countValue")));
